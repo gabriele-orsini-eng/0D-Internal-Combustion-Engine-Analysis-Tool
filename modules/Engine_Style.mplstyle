@@ -1,0 +1,21 @@
+# Line settings
+lines.linewidth : 2.5
+
+# Graph styles
+figure.facecolor : FFFFFF
+axes.facecolor : F4F5F7
+
+# Text style
+text.color : 202124
+axes.labelcolor : 202124
+xtick.color : 4A4A4A
+ytick.color : 4A4A4A
+
+# Grid Style
+axes.grid : True
+grid.color : DCDFE4
+grid.linewidth : 0.6
+grid.alpha : 0.7
+
+# Color Palette
+axes.prop_cycle : cycler('color', ['6750A4', 'B3261E', '035E7B', '2E7D32', 'E65100', '00639B', '911F74', '006A60', 'F57C00', '607D8B', 'D81B60', '556B2F'])
