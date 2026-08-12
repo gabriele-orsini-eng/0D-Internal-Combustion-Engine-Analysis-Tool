@@ -1,6 +1,6 @@
 # Engine-validation-tool
 
-A modular Python tool for the preliminary analysis of internal combustion engines (ICE). The Python script reads geometric and operation parameters from an Excel file and automatically generates a detailed technical report.
+A modular Python tool for the preliminary analysis of internal combustion engines (ICE). The Python script reads geometric and operational parameters from an Excel file and automatically generates a detailed technical report.
 
 ## ℹ️ Included Features
 * **InputData**: Automatic reading of data from an Excel file
