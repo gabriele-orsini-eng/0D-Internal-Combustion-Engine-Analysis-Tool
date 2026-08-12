@@ -26,10 +26,8 @@ The code will be further developed with the following modules:
 - [ ] Liners verification
 - [ ] Crankshaft Structural and Torsional validation
 - [ ] MOFT Calculation
-<br>
-For organizational purposes:
 - [ ] Adoption of the PEP8 standard
-- [ ] Modular approach for the report
+- [ ] Modular approach also for the report
 
 ## 🛠️ Installation & Use
 1. Clone the repository
