@@ -6,9 +6,8 @@ Created on Wed Aug 12 12:19:12 2026
 @author: gabriele
 """
 
-os
 numpy
 pandas
 matplotlib
 reportlab
-dataclasses
+openpyxl
