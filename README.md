@@ -1,24 +1,125 @@
 # Engine-validation-tool
 
-A modular Python tool for the preliminary analysis of internal combustion engines (ICE). The Python script reads geometric and operational parameters from an Excel file and automatically generates a detailed technical report.
+A modular Python tool for the preliminary 0D thermodynamic and cranktrain analysis of internal combustion engines (ICE).
 
-## ℹ️ Included Features
-* **InputData**: Automatic reading of data from an Excel file
-* **PreliminaryCalculation**: Calculation of additional useful data for the subsequent steps such as the mean piston speed
-* **Thermodynamic**: Calculation of the thermodynamic cycle and in-cylinder pressure
-* **Pressure_scaling**: Scaling of the in-cylinder pressure curve as a function of a new peak firing pressure (PFP) target
-* **Engine_force**: Calculation of the kinematic and dynamic relative to the piston motion
-* **Plot**: Automatic generation of graphs
-* **Report**: Automatic generation of a report including the main results and most important graphs
+The tool processes geometric and operating parameters from an Excel template and automatically performs preliminary calculations, engine force analysis, engineering checks, visualization, and technical report generation.
 
-## ⚠️ Additional Features (PDF Preview)
-The code structure is designed to accommodate more advanced structural analysis modules.
-It is possible to examine the file `output_examples/Full_Engine_Report.pdf` to visualize the additional results generated via the following modules:
-* **Material**: Calculation of additional data useful for the structural analysis.
-* **ValveDynamic_Cynematic**: Calculation of the valve motion, speed and acceleration through 4 different laws. In additon to that it allows to study the lobe undercut and verify if a single spring is suitable for this application
-* **PistonCalculation**: Geometry calculation and structural verification of the piston
-* **PistonRing**: Geometry calculation and structural verification of piston compression ring
-* **PistonPinCalculation**: Geometry calculation and structural verification of piston pin
+> **Project purpose:** This is a personal engineering and learning project, developed to strengthen my understanding of preliminary internal combustion engine calculations while improving my Python skills. It is not intended to replace detailed commercial simulation or design tools.
+
+---
+
+## Overview
+
+The purpose of this project is to provide a fast and parametrical starting point for the preliminary analysis of an internal combustion engine before moving to more detailed simulation methods.
+
+The workflow is designed around a simple principle:
+
+**Input → Calculation → Verification → Visualization → Report**
+
+The user provides the engine parameters through an Excel template. The Python modules then perform the required calculations and automatically generate plots and a technical report.
+
+This approach allows different engine configurations and operating conditions to be investigated without modifying the calculation code directly.
+
+---
+
+## ℹ️​ Main Features
+
+### Input
+
+- Excel-based input template
+- Engine geometric parameters
+- Operating conditions
+- Thermodynamic parameters
+- Cranktrain masses
+- Configurable calculation options
+
+### Preliminary Calculations
+
+- Engine geometric calculations
+- Displacement and compression ratio
+- Basic engine performance parameters
+- Preliminary component sizing
+
+### 0D Thermodynamic Analysis
+
+- Cylinder volume throughout the engine cycle
+- Pressure evolution
+- Combustion modelling
+- Indicating diagram
+- Indicated work and performance parameters
+- Pressure scaling to a target peak firing pressure
+
+### Cranktrain Analysis
+
+- Piston kinematics
+- Gas forces
+- Inertial forces
+- Resulting engine/cranktrain forces
+- Crankshaft torque
+
+### Engineering Checks
+
+The generated report includes preliminary checks of selected engine components and operating parameters.
+
+Results are automatically highlighted according to predefined limits or design criteria.
+
+These checks are intended as **preliminary engineering assessments**, rather than detailed component certification or final design validation.
+
+### Automated Visualization and Reporting
+
+The calculation process automatically generates:
+
+- Cylinder pressure plots
+- Indicating diagrams
+- Pressure-scaled diagrams
+- Cranktrain force plots
+- Engine torque plots
+- Calculation tables
+- Engineering check tables
+- Automatically generated technical report
+
+---
+
+## Workflow
+
+```text
+                 ┌──────────────────┐
+                 │  Excel Template  │
+                 │  Engine Inputs   │
+                 └────────┬─────────┘
+                          │
+                          ▼
+                 ┌──────────────────┐
+                 │  Preliminary     │
+                 │  Calculations    │
+                 └────────┬─────────┘
+                          │
+                          ▼
+                 ┌──────────────────┐
+                 │ 0D Thermodynamic │
+                 │ Model            │
+                 └────────┬─────────┘
+                          │
+                ┌─────────┴─────────┐
+                ▼                   ▼
+       ┌────────────────┐   ┌────────────────┐
+       │ Pressure       │   │ Cranktrain     │
+       │ Scaling        │   │ Forces         │
+       └────────────────┘   └───────┬────────┘
+                                    │
+                                    ▼
+                           ┌─────────────────┐
+                           │ Engineering     │
+                           │ Checks          │
+                           └────────┬────────┘
+                                    │
+                         ┌──────────┴──────────┐
+                         ▼                     ▼
+                 ┌──────────────┐      ┌──────────────┐
+                 │ Plots        │      │ PDF Report   │
+                 └──────────────┘      └──────────────┘
+
+
 
 ## 📊 Roadmap
 The code will be further developed with the following modules:
