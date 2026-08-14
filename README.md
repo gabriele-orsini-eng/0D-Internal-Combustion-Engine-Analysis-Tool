@@ -80,6 +80,29 @@ The calculation process automatically generates:
 
 ---
 
+## ⚠️ Additional Features (PDF Preview)
+The code structure is designed to accommodate more advanced structural analysis modules.
+It is possible to examine the file `output_examples/Full_Engine_Report.pdf` to visualize the additional results generated via the following modules:
+
+### Material
+- Calculation of additional material data useful for the structural analysis
+  
+### Valve Dynamic and Cynematic
+- Calculation of the valve motion, speed and acceleration through 4 different laws
+- Lobe undercut feasibility study
+- Single spring verification
+  
+### Piston Calculation
+- Geometry calculation and structural verification of the piston main sections
+  
+### Piston Ring Calculation
+- Geometry calculation and structural verification of the piston compression ring
+
+### Piston Pin Calculation
+- Geometry calculation and structural verification of the piston pin
+
+---
+
 ## Workflow
 
 ```text
