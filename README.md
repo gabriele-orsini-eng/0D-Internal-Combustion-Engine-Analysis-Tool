@@ -120,7 +120,7 @@ The calculation process automatically generates:
                  └──────────────┘      └──────────────┘
 
 
-```text
+```
 
 ---
 
