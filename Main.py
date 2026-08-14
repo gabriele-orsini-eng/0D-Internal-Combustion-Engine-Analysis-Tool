@@ -17,9 +17,6 @@ import modules.PreliminaryCalculation as pc
 import modules.Thermodynamic as therm
 import modules.Pressure_scaling as psca
 import modules.Engine_force as EnFr
-
-# Please, be awere that different modules have been removed in this version
-
 import modules.Plot as plot
 from report.Report import report_generation
 
