@@ -79,11 +79,7 @@ def report_generation(EngineData: BaseEngineData, ThermData: ThermodynamicData,
     story.append(Paragraph("1. Project General Description", subtitle_style))
     story.append(Paragraph("2. Base Engine Data", subtitle_style))
     story.append(Paragraph("3. Engine Kinematic & Thermodynamic Calculation", subtitle_style))
-    story.append(Paragraph("4. Valve Dynamic and Kinematic", subtitle_style))
-    story.append(Paragraph("5. Cranktrain Engine Forces & Torque", subtitle_style))
-    story.append(Paragraph("6. Piston Dimensioning and Verification", subtitle_style))
-    story.append(Paragraph("7. Piston Ring Verification", subtitle_style))
-    story.append(Paragraph("8. Piston Pin Verification", subtitle_style))
+    story.append(Paragraph("4. Cranktrain Engine Forces & Torque", subtitle_style))
     story.append(PageBreak())
     
     # General Part
@@ -215,7 +211,7 @@ def report_generation(EngineData: BaseEngineData, ThermData: ThermodynamicData,
     )
     story.append(Paragraph(testo_architettura, body_style))
     
-    img_path = "/home/gabriele/Documenti/Python_Exercise/engine_plots_output/Wiebe Cylinder Pressure.png"
+    img_path = "output_examples/Wiebe Cylinder Pressure.png"
     image = Image(img_path, width=500, height=250)
 
     story.append(image)
@@ -225,7 +221,7 @@ def report_generation(EngineData: BaseEngineData, ThermData: ThermodynamicData,
     )
     story.append(Paragraph(testo_architettura, body_style))
     
-    img_path = "/home/gabriele/Documenti/Python_Exercise/engine_plots_output/Indicating Diagram.png"
+    img_path = "output_example/Indicating Diagram.png"
     image = Image(img_path, width=500, height=250)
 
     story.append(image)
@@ -270,11 +266,11 @@ def report_generation(EngineData: BaseEngineData, ThermData: ThermodynamicData,
     
     if int(ThermData.pressure_scaling) == 1:
         
-        img_path_1 = "/home/gabriele/Documenti/Python_Exercise/engine_plots_output/Pressure Scaled to New PFP.png"
+        img_path_1 = "output_examples/Pressure Scaled to New PFP.png"
         image_1 = Image(img_path_1, width=500, height=250)
         story.append(image_1)
         
-        img_path_2 = "/home/gabriele/Documenti/Python_Exercise/engine_plots_output/Indicating Diagram at New PFP.png"
+        img_path_2 = "output_examples/Indicating Diagram at New PFP.png"
         image_2 = Image(img_path_2, width=500, height=250)
         story.append(image_2)
     
@@ -288,16 +284,8 @@ def report_generation(EngineData: BaseEngineData, ThermData: ThermodynamicData,
         story.append(Paragraph(testo_note, body_style))
         
     story.append(PageBreak())
-    
-    story.append(Paragraph("4.1 Valve Dynamic and Kinematic", subtitle_style))
-    story.append(Spacer(1, 15))
-    testo_architettura = (
-       "Not vailable in this version"
-    )
-    story.append(Paragraph(testo_architettura, body_style))  
-    story.append(PageBreak())
-    
-    story.append(Paragraph("5.1 Cranktrain Engine Forces and Torque", subtitle_style))
+  
+    story.append(Paragraph("4.1 Cranktrain Engine Forces and Torque", subtitle_style))
     story.append(Spacer(1, 15))
     testo_architettura = (
         "The two following forces are computed:"
@@ -307,50 +295,16 @@ def report_generation(EngineData: BaseEngineData, ThermData: ThermodynamicData,
     )
     story.append(Paragraph(testo_architettura, body_style))
     
-    img_path = "/home/gabriele/Documenti/Python_Exercise/engine_plots_output/Cranktrain Engine Forces.png"
+    img_path = "output_examples/Cranktrain Engine Forces.png"
     image = Image(img_path, width=500, height=250)
     story.append(image)
 
-    img_path = "/home/gabriele/Documenti/Python_Exercise/engine_plots_output/Cranktrain Engine Torque.png"
+    img_path = "output_examples/Cranktrain Engine Torque.png"
     image = Image(img_path, width=500, height=250)
  
     story.append(image)
     story.append(PageBreak())
 
-    story.append(Paragraph("6.1 Piston Base Dimensions", subtitle_style))
-    story.append(Spacer(1, 15))
-    testo_architettura = (
-        "Not available in this version"
-    )
-    story.append(Paragraph(testo_architettura, body_style))
-    story.append(PageBreak())
-    
-    
-    
-    story.append(Paragraph("6.1 Piston Verification", subtitle_style))
-    story.append(Spacer(1, 15))
-    testo_architettura = (
-        "Not available in this version"
-    )
-    story.append(Paragraph(testo_architettura, body_style))
-    story.append(PageBreak())
-    
-    story.append(Paragraph("7.1 Compression Ring", subtitle_style))
-    story.append(Spacer(1, 15))
-    testo_architettura = (
-        "Not available in this version"
-    )
-    story.append(Paragraph(testo_architettura, body_style))
-    story.append(PageBreak())
-    
-    
-    story.append(Paragraph("8.1 Piston Pin Geometry", subtitle_style))
-    story.append(Spacer(1, 15))
-
-    testo_architettura = (
-        "Not available in this version"
-    )
-    story.append(Paragraph(testo_architettura, body_style))
     doc.build(story)
     
 if __name__ == "__main__":
