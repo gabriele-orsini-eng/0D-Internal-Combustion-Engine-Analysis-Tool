@@ -33,4 +33,4 @@ The code will be further developed with the following modules:
 1. Clone the repository
 2. Install the following dependencies: `pip install -r requirements.txt`
 3. Open `templates/template_input.xlsx` and insert the required data
-4. Launch the main script: `python main.py`
+4. Launch the main script: `python Main.py`
