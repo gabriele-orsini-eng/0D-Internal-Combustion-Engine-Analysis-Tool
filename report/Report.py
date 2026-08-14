@@ -98,8 +98,8 @@ def report_generation(EngineData: BaseEngineData, ThermData: ThermodynamicData,
     story.append(Paragraph("1.2 Code and Modules architecture", subtitle_style))
     story.append(Spacer(1, 15))
     testo_architettura = (
-        "The software architecture is divide in the following sections to "
-        "retain a better scalability and easy maintenece in the future:"
+        "The software architecture is divided in the following sections to "
+        "retain a better scalability and easy maintenance in the future:"
     )
     story.append(Paragraph(testo_architettura, body_style))
     
@@ -108,7 +108,7 @@ def report_generation(EngineData: BaseEngineData, ThermData: ThermodynamicData,
         ["InputData.py", "Input data management"],
         ["PreliminaryCalculation.py", "Main engine data calculation including mean engine speed and valve diameter"],
         ["Main.py", "Main script that manage modules, calculation and report generation"],
-        ["Thermodynamic.py", "Kinematic and Thermodynamic caculation"],
+        ["Thermodynamic.py", "Kinematic and Thermodynamic calculation"],
         ["Pressure_scaling.py", "Scaling of the pressure curve as a function of the new PFP"],
         ["Engine_force.py", "Kinematic and Dynamic calculation of the piston motion"],
         ["Plot.py", "Automatic generation of graphs"],
@@ -133,7 +133,7 @@ def report_generation(EngineData: BaseEngineData, ThermData: ThermodynamicData,
     story.append(Paragraph("1.3 Notes", subtitle_style))
     story.append(Spacer(1, 15))
     testo_note = (
-        "This tool requires the following Python lybraries: Dataclasses, Numpy, Pandas, Matplotlib and ReportLab "
+        "This tool requires the following Python libraries: Dataclasses, Numpy, Pandas, Matplotlib and ReportLab "
     )
     story.append(Paragraph(testo_note, body_style))
     story.append(PageBreak())
@@ -228,7 +228,7 @@ def report_generation(EngineData: BaseEngineData, ThermData: ThermodynamicData,
     story.append(PageBreak())
     
     testo_architettura = (
-        "The table report the general engine performance data: "
+        "The table reports the general engine performance data: "
     )
     story.append(Paragraph(testo_architettura, body_style))
     
@@ -288,9 +288,9 @@ def report_generation(EngineData: BaseEngineData, ThermData: ThermodynamicData,
     story.append(Paragraph("4.1 Cranktrain Engine Forces and Torque", subtitle_style))
     story.append(Spacer(1, 15))
     testo_architettura = (
-        "The two following forces are computed:"
+        "The following two quantities are computed:"
         "<br/>1) The total force due to the components inertia and gas force;"
-        "<br/>2) The istantaneous torque that is produced by the engine."
+        "<br/>2) The instantaneous torque that is produced by the engine."
         "<br/> Be aware that the following data refer to a single engine cylinder."
     )
     story.append(Paragraph(testo_architettura, body_style))
