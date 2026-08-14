@@ -121,6 +121,8 @@ The calculation process automatically generates:
 
 
 
+---
+
 ## 📊 Roadmap
 The code will be further developed with the following modules:
 - [ ] Connencting rod and bolt verification
@@ -129,6 +131,8 @@ The code will be further developed with the following modules:
 - [ ] MOFT Calculation
 - [ ] Adoption of the PEP8 standard
 - [ ] Modular approach also for the report
+
+---
 
 ## 🛠️ Installation & Use
 1. Clone the repository
