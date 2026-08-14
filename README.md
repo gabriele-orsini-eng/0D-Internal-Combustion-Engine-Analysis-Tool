@@ -1,4 +1,4 @@
-# Engine-validation-tool
+# 0D Internal Combustion Engine Analysis Tool
 
 A modular Python tool for the preliminary 0D thermodynamic and cranktrain analysis of internal combustion engines (ICE).
 
